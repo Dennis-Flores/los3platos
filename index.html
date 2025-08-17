@@ -1,0 +1,269 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Los 3 Platos — Cocina de autor & eventos</title>
+  <meta name="description" content="Restaurante elegante con cocina de autor y eventos especiales en Puerto Montt. Reserva online y organiza tu evento con nosotros.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+
+  <!-- Schema.org JSON-LD: Organization, Restaurant, Menu, and Events -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Los 3 Platos",
+    "address": {"@type": "PostalAddress", "streetAddress": "Av. Gourmet 123", "addressLocality": "Puerto Montt", "addressCountry": "CL"},
+    "telephone": "+56 9 5555 5555",
+    "servesCuisine": "Cocina de autor",
+    "menu": "/content.json",
+    "url": "https://tu-dominio.cl",
+    "sameAs": ["https://www.instagram.com/explore/tags/CasaBruma/"]
+  }
+  </script>
+
+  <!-- Analytics placeholders (replace with your IDs) -->
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script> -->
+  <!-- Facebook Pixel -->
+  <!-- <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID'); fbq('track', 'PageView');
+  </script> -->
+</head>
+<body>
+  <header class="site">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"></div>
+        <div class="name"><span data-restaurant-name>Los 3 Platos</span></div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#experiencia">Menú</a></li>
+          <li><a href="#eventos">Eventos</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a class="btn" href="#contacto">Consulta tu evento</a>
+        <a class="btn filled" href="#reserva">Reserva tu mesa</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="reserva" aria-label="Hero">
+      <div class="bg">
+        <picture>
+          <source srcset="assets/hero-2.svg" media="(min-width: 768px)">
+          <img src="assets/hero-1.svg" alt="Platos y eventos">
+        </picture>
+      </div>
+      <div class="overlay container">
+        <h1 class="title">Cocina de autor & <br> eventos que se recuerdan</h1>
+        <p class="subtitle">Elegancia, ambiente acogedor y servicio impecable.</p>
+        <div class="cta">
+          <a class="btn filled" href="#contacto">Consulta tu evento</a>
+          <a class="btn" href="#reserva">Reserva tu mesa</a>
+        </div>
+        <div class="quick-reserve">
+          <form onsubmit="handleQuickReserve(event)">
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <select name="people" aria-label="Personas">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
+            <button class="btn filled" type="submit">Reservar</button>
+          </form>
+          <small style="color:#cbbba0">¿Usas OpenTable? Reemplaza este formulario por el widget con tu ID.</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container grid">
+        <div>
+          <h2>Nuestra historia</h2>
+          <p>En <strong>Los 3 Platos</strong> celebramos los productos del sur de Chile con una propuesta de autor que combina técnicas contemporáneas y tradición. Nuestro salón y terraza están pensados para crear recuerdos: cenas íntimas, conciertos acústicos y eventos privados a tu medida.</p>
+          <div class="seals" id="seals" aria-label="Sellos de calidad"></div>
+        </div>
+        <div class="masonry" aria-label="Ambiente del local">
+          <img src="assets/ambiente-1.svg" alt="Ambiente cálido" loading="lazy">
+          <img src="assets/ambiente-2.svg" alt="Detalle de mesa" loading="lazy">
+          <img src="assets/ambiente-3.svg" alt="Concierto acústico" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCIA GASTRONÓMICA -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <h2>Experiencia gastronómica</h2>
+        <p>Explora nuestro menú interactivo y descubre platos destacados. Descarga el menú completo en PDF cuando quieras.</p>
+        <div id="menu" class="menu"></div>
+        <div style="margin-top:1rem">
+          <a class="btn" href="assets/menu.pdf" download>Descargar menú PDF</a>
+        </div>
+        <h3 style="margin-top:2rem">Platos estrella</h3>
+        <div id="featured" class="featured"></div>
+      </div>
+    </section>
+
+    <!-- EVENTOS -->
+    <section class="section" id="eventos">
+      <div class="container">
+        <h2>Eventos</h2>
+        <div class="grid cols-2">
+          <div class="calendar">
+            <div class="head" id="cal-head"></div>
+            <div class="grid" id="cal-grid"></div>
+          </div>
+          <div>
+            <h3>Eventos privados</h3>
+            <p>Organiza bodas, cumpleaños y celebraciones corporativas. Paquetes flexibles y coordinación integral.</p>
+            <div id="packages" class="grid"></div>
+            <div style="margin-top:1rem">
+              <h3>Testimonios</h3>
+              <div id="testimonials" class="grid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA MULTIMEDIA -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <h2>Galería</h2>
+        <div class="gallery-grid">
+          <img src="assets/dish-1.svg" alt="Risotto de Setas" loading="lazy">
+          <img src="assets/dish-2.svg" alt="Cordero Patagónico" loading="lazy">
+          <img src="assets/dish-3.svg" alt="Salmón a la Mantequilla" loading="lazy">
+          <div class="video">
+            <iframe src="https://www.youtube.com/embed/ysz5S6PUM-U" title="Video del local" allowfullscreen></iframe>
+          </div>
+          <img src="assets/ambiente-1.svg" alt="Ambiente" loading="lazy">
+          <img src="assets/ambiente-2.svg" alt="Detalle" loading="lazy">
+        </div>
+        <p style="margin-top:.6rem">Instagram: usa el hashtag <strong>#CasaBruma</strong>. Integra tu feed con un widget externo si lo deseas.</p>
+      </div>
+    </section>
+
+    <!-- BLOG (resumen) -->
+    <section class="section" id="blog">
+      <div class="container">
+        <h2>Noticias & Blog</h2>
+        <div class="grid cols-3">
+          <article class="card">
+            <div class="p">
+              <h3>Sabores de temporada</h3>
+              <p>Cómo elegimos nuestros ingredientes locales cada estación.</p>
+              <a class="btn" href="blog/index.html">Ver blog</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="p">
+              <h3>Noche de jazz</h3>
+              <p>Así se vivieron nuestros últimos conciertos íntimos.</p>
+              <a class="btn" href="blog/index.html">Ver blog</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="p">
+              <h3>Eventos privados</h3>
+              <p>Guía rápida para planificar tu celebración perfecta.</p>
+              <a class="btn" href="blog/index.html">Ver blog</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container contact" id="contact">
+        <h2>Contacto</h2>
+        <div class="grid cols-2">
+          <div>
+            <iframe class="map" title="Mapa" loading="lazy" src="https://www.google.com/maps?q=Puerto+Montt&output=embed"></iframe>
+            <p><strong>Dirección:</strong> Av. Gourmet 123, Puerto Montt</p>
+            <p><a id="phone-link" href="tel:+569 9249 7195">+56 9 5555 5555</a> · <a id="wa-link" href="https://wa.me/56992497195">WhatsApp</a></p>
+            <p>Horarios: Mar–Sáb 13:00–23:30, Dom "CERRADO"</p>
+            <div class="seals">
+              <a class="btn" href="mailto:reservas@casabruma.cl?subject=Reserva">Correo</a>
+              <a class="btn filled" href="#reserva">Reservas</a>
+            </div>
+          </div>
+          <div>
+            <h3>Formulario</h3>
+            <form class="grid" onsubmit="event.preventDefault(); alert('¡Gracias! Te contactaremos pronto.'); this.reset();">
+              <input required placeholder="Nombre" name="nombre">
+              <input required placeholder="Email" type="email" name="email">
+              <input placeholder="Teléfono" name="telefono">
+              <select name="proposito" required>
+                <option value="">Motivo</option>
+                <option>Reserva</option>
+                <option>Evento privado</option>
+                <option>Contacto general</option>
+              </select>
+              <input id="evento_tipo" placeholder="Tipo de evento (opcional)">
+              <textarea placeholder="Mensaje" rows="4" name="mensaje"></textarea>
+              <button class="btn filled" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>&copy; <span data-restaurant-name>Los 3 Platos</span> · Todos los derechos reservados</div>
+    </div>
+  </footer>
+
+  <!-- Email popup -->
+  <div class="popup" id="popup" role="dialog" aria-modal="true" aria-label="Suscripción">
+    <div class="box">
+      <h3 style="margin-top:0">¡Bienvenido a Los 3 Platos!</h3>
+      <p>Suscríbete y recibe <strong>10% de descuento</strong> en tu primera reserva.</p>
+      <form id="popup-form" class="grid">
+        <input type="email" name="email" placeholder="Tu correo" required>
+        <button class="btn filled" type="submit">Suscribirme</button>
+      </form>
+      <div class="status" style="margin-top:.5rem; color:#cbbba0"></div>
+      <div style="text-align:right; margin-top:.5rem">
+        <button class="btn" id="popup-close" aria-label="Cerrar">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

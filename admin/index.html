@@ -1,0 +1,59 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin CMS — Casa Bruma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    textarea{width:100%; height:60vh; background:#0f0c0a; color:#f8f4ef; border:1px solid rgba(255,255,255,.1); border-radius:8px; padding:1rem}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container nav">
+      <div class="brand"><div class="logo"></div><div class="name">Casa Bruma — Admin</div></div>
+      <nav><ul><li><a href="../index.html">Sitio</a></li></ul></nav>
+      <div><a class="btn" href="#" id="download">Descargar JSON</a></div>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container">
+      <h1 class="title">Editor de contenido</h1>
+      <p>Carga y edita <code>content.json</code>. Luego descarga el archivo para reemplazarlo en el proyecto.</p>
+      <div class="grid">
+        <input type="file" id="file" accept="application/json">
+        <textarea id="editor" placeholder="Pega aquí tu JSON"></textarea>
+        <button class="btn filled" id="format">Formatear</button>
+      </div>
+    </div>
+  </main>
+  <script>
+    const editor = document.getElementById('editor');
+    document.getElementById('file').addEventListener('change', async (e)=>{
+      const f = e.target.files[0];
+      if(!f) return;
+      const text = await f.text();
+      editor.value = text;
+    });
+    document.getElementById('format').onclick = ()=>{
+      try{ editor.value = JSON.stringify(JSON.parse(editor.value), null, 2); }
+      catch(e){ alert('JSON inválido'); }
+    };
+    document.getElementById('download').onclick = (e)=>{
+      e.preventDefault();
+      try{
+        const blob = new Blob([editor.value], {type:'application/json'});
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(blob);
+        a.download = 'content.json';
+        a.click();
+      }catch(err){ alert('No hay contenido'); }
+    };
+  </script>
+</body>
+</html>

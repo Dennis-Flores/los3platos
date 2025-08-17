@@ -1,0 +1,194 @@
+{
+  "restaurant": {
+    "name": "Casa Bruma",
+    "tagline": "Cocina de autor & eventos especiales",
+    "phone": "+56 9 5555 5555",
+    "whatsapp": "56955555555",
+    "email": "reservas@casabruma.cl",
+    "address": "Av. Gourmet 123, Puerto Montt, Chile",
+    "instagram_hashtag": "CasaBruma",
+    "opentable_rid": "RESTAURANT_ID_PLACEHOLDER"
+  },
+  "seals": [
+    {
+      "label": "Chef reconocido 2024",
+      "icon": "⭐"
+    },
+    {
+      "label": "Top 10 Restaurantes Región de Los Lagos",
+      "icon": "🏆"
+    },
+    {
+      "label": "Ingredientes locales",
+      "icon": "🌿"
+    }
+  ],
+  "menu_categories": [
+    {
+      "name": "Entradas",
+      "icon": "🍽️"
+    },
+    {
+      "name": "Platos principales",
+      "icon": "🍲"
+    },
+    {
+      "name": "Postres",
+      "icon": "🍮"
+    },
+    {
+      "name": "Bebidas",
+      "icon": "🥂"
+    }
+  ],
+  "menu_items": [
+    {
+      "name": "Ceviche de Reineta",
+      "category": "Entradas",
+      "price": 8900,
+      "desc": "Cítricos y ají verde, pesca del día.",
+      "tags": [
+        "gluten-free"
+      ]
+    },
+    {
+      "name": "Empanaditas de Centolla",
+      "category": "Entradas",
+      "price": 9900,
+      "desc": "Masa crujiente, salsas caseras.",
+      "tags": []
+    },
+    {
+      "name": "Risotto de Setas",
+      "category": "Platos principales",
+      "price": 13900,
+      "desc": "Arroz arbóreo y mix de hongos.",
+      "tags": [
+        "vegano"
+      ]
+    },
+    {
+      "name": "Cordero Patagónico",
+      "category": "Platos principales",
+      "price": 17900,
+      "desc": "Lento cocción, puré de topinambur.",
+      "tags": [
+        "sin-gluten"
+      ]
+    },
+    {
+      "name": "Salmón a la Mantequilla",
+      "category": "Platos principales",
+      "price": 16900,
+      "desc": "Mantequilla avellanada, verduras de estación.",
+      "tags": [
+        "gluten-free"
+      ]
+    },
+    {
+      "name": "Brownie de Chocolate",
+      "category": "Postres",
+      "price": 6900,
+      "desc": "Con helado de vainilla.",
+      "tags": []
+    },
+    {
+      "name": "Tiramisú de la Casa",
+      "category": "Postres",
+      "price": 7200,
+      "desc": "Clásico con toque de amaretto.",
+      "tags": []
+    },
+    {
+      "name": "Sour de Calafate",
+      "category": "Bebidas",
+      "price": 5600,
+      "desc": "Receta de autor.",
+      "tags": []
+    },
+    {
+      "name": "Mocktail Bruma",
+      "category": "Bebidas",
+      "price": 4800,
+      "desc": "Sin alcohol, frutos rojos.",
+      "tags": [
+        "vegano",
+        "gluten-free"
+      ]
+    }
+  ],
+  "featured_dishes": [
+    {
+      "name": "Risotto de Setas",
+      "image": "assets/dish-1.svg",
+      "desc": "Texturas de hongos, aceite de trufa.",
+      "price": 13900,
+      "tags": [
+        "vegano"
+      ]
+    },
+    {
+      "name": "Cordero Patagónico",
+      "image": "assets/dish-2.svg",
+      "desc": "Braseado por 6 horas, puré de topinambur.",
+      "price": 17900,
+      "tags": []
+    },
+    {
+      "name": "Salmón a la Mantequilla",
+      "image": "assets/dish-3.svg",
+      "desc": "Mantequilla avellanada y verduras.",
+      "price": 16900,
+      "tags": [
+        "gluten-free"
+      ]
+    }
+  ],
+  "events": [
+    {
+      "title": "Concierto acústico: Noche de Bossa Nova",
+      "date": "2025-08-22",
+      "time": "20:00",
+      "summary": "Música en vivo con menú degustación.",
+      "type": "concierto"
+    },
+    {
+      "title": "Cena temática: Sabores del Sur",
+      "date": "2025-09-05",
+      "time": "20:30",
+      "summary": "Maridaje con vinos del valle.",
+      "type": "cena-tematica"
+    }
+  ],
+  "packages": [
+    {
+      "name": "Paquete Boda Oro",
+      "includes": [
+        "Salón privado",
+        "Menú de 4 tiempos",
+        "Barra libre 4 horas",
+        "Coordinador de evento"
+      ],
+      "price": "Desde $1.490.000"
+    },
+    {
+      "name": "Cumpleaños Premium",
+      "includes": [
+        "Espacio reservado",
+        "Menú especial",
+        "DJ 3 horas"
+      ],
+      "price": "Desde $490.000"
+    }
+  ],
+  "testimonials": [
+    {
+      "author": "Marcela R.",
+      "text": "Nuestra boda fue perfecta, la atención increíble."
+    },
+    {
+      "author": "Álvaro T.",
+      "text": "El mejor lugar para celebrar, la comida fenomenal."
+    }
+  ]
+}

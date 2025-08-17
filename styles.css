@@ -1,0 +1,155 @@
+
+/* Casa Bruma – styles.css | Mobile-first, elegant, performance-minded */
+:root{
+  --bg:#14110f;
+  --fg:#f8f4ef;
+  --muted:#cbbba0;
+  --gold:#b08d57;
+  --earth:#3b2f2f;
+  --accent:#d4af37;
+  --card:#1c1816;
+  --ok:#2ecc71;
+  --warn:#f1c40f;
+  --danger:#e67e22;
+  --font-body: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--bg); color:var(--fg);
+  font-family:var(--font-body); line-height:1.6;
+}
+
+a{color:var(--accent); text-decoration:none}
+a:hover{opacity:.9}
+
+.container{width:min(1200px, 92%); margin-inline:auto}
+
+header.site{
+  position:sticky; top:0; z-index:50; backdrop-filter:saturate(120%) blur(6px);
+  background:rgba(20,17,15,.7); border-bottom:1px solid rgba(255,255,255,.06);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.8rem 0;
+}
+.brand{display:flex; gap:.6rem; align-items:center}
+.brand .logo{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--accent)); box-shadow:var(--shadow)}
+.brand .name{font-family:var(--font-display); letter-spacing:.5px; font-weight:700}
+nav ul{display:flex; list-style:none; gap:1rem; padding:0; margin:0}
+nav a{padding:.4rem .7rem; border-radius:999px; transition:transform .2s}
+nav a:hover{transform:translateY(-2px); background:rgba(255,255,255,.06)}
+
+.btn{appearance:none; border:1px solid var(--gold); color:var(--fg); background:transparent; padding:.8rem 1rem; border-radius:999px; cursor:pointer; transition:all .2s}
+.btn.filled{background:linear-gradient(135deg,var(--gold),var(--accent)); color:#1a140a; border-color:transparent; font-weight:700}
+.btn:hover{transform:translateY(-2px); box-shadow:var(--shadow)}
+
+.hero{
+  position:relative; overflow:hidden;
+  min-height:72vh; display:grid; place-items:center;
+}
+.hero .bg{
+  position:absolute; inset:0; display:grid;
+}
+.hero .bg img, .hero .bg video{
+  width:100%; height:100%; object-fit:cover; filter:brightness(.6);
+}
+.hero .overlay{
+  position:relative; z-index:2; text-align:center; padding:4rem 0;
+}
+h1.title{font-family:var(--font-display); font-size:clamp(2.2rem, 6vw, 4rem); margin:.2rem 0}
+.subtitle{color:var(--muted); font-size:1.1rem}
+
+.hero .cta{
+  margin-top:1.2rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center;
+}
+.quick-reserve{
+  margin-top:1rem; background:rgba(0,0,0,.5); border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius); padding:.8rem; display:grid; gap:.6rem;
+}
+.quick-reserve form{display:grid; grid-template-columns:1fr 1fr 1fr auto; gap:.6rem}
+.quick-reserve input, .quick-reserve select{
+  background:#0f0c0a; color:var(--fg); border:1px solid rgba(255,255,255,.1);
+  border-radius:10px; padding:.6rem .7rem;
+}
+
+.section{padding:3.5rem 0}
+.section h2{font-family:var(--font-display); font-size:clamp(1.6rem, 3vw, 2.4rem); margin:0 0 1rem 0}
+
+.masonry{
+  columns:2; column-gap:.8rem;
+}
+.masonry img{
+  width:100%; margin:0 0 .8rem; border-radius:12px; break-inside:avoid; box-shadow:var(--shadow);
+}
+
+.seals{display:flex; gap:.8rem; flex-wrap:wrap}
+.seal{background:var(--card); border:1px solid rgba(255,255,255,.06); border-radius:999px; padding:.5rem .8rem; display:flex; align-items:center; gap:.5rem}
+
+.menu{
+  display:grid; gap:1rem;
+}
+.menu .filters{display:flex; gap:.6rem; flex-wrap:wrap}
+.menu .category{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:1rem}
+.menu details{background:#0f0c0a; border:1px solid rgba(255,255,255,.06); border-radius:12px; padding: .6rem .8rem}
+.menu summary{cursor:pointer; font-weight:700}
+.item{display:flex; justify-content:space-between; gap:.6rem; padding:.5rem 0; border-bottom:1px dashed rgba(255,255,255,.08)}
+.item:last-child{border-bottom:none}
+.item .tags{font-size:.85rem; color:var(--muted)}
+
+.featured{
+  display:grid; gap:1rem;
+}
+.card{
+  background:var(--card); border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow);
+  display:grid;
+}
+.card img{width:100%; height:240px; object-fit:cover}
+.card .p{padding:1rem}
+.card .meta{display:flex; justify-content:space-between; align-items:center; color:var(--muted)}
+
+.grid{display:grid; gap:1rem}
+.grid.cols-2{grid-template-columns:1fr 1fr}
+.grid.cols-3{grid-template-columns:repeat(3,1fr)}
+
+.calendar{background:var(--card); border:1px solid rgba(255,255,255,.08); border-radius:var(--radius); padding:1rem}
+.calendar .head{display:flex; justify-content:space-between; align-items:center; margin-bottom:.5rem}
+.calendar .grid{display:grid; grid-template-columns:repeat(7,1fr); gap:.4rem}
+.calendar .day{background:#0f0c0a; border:1px solid rgba(255,255,255,.06); border-radius:8px; padding:.5rem; min-height:70px; font-size:.9rem}
+.calendar .event{margin-top:.3rem; font-size:.75rem; background:rgba(212,175,55,.1); border-left:3px solid var(--gold); padding:.2rem .3rem; border-radius:4px}
+
+.gallery-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:.6rem}
+.gallery-grid img{width:100%; border-radius:12px; box-shadow:var(--shadow)}
+.gallery-grid .video{position:relative; padding-top:56.25%}
+.gallery-grid .video iframe{position:absolute; inset:0; width:100%; height:100%; border:0; border-radius:12px}
+
+.contact{display:grid; gap:1rem}
+.map{min-height:300px; border:0; width:100%; border-radius:12px; box-shadow:var(--shadow)}
+
+.footer{padding:2rem 0; color:var(--muted); border-top:1px solid rgba(255,255,255,.06)}
+
+.badge{padding:.25rem .5rem; border-radius:6px; border:1px solid rgba(255,255,255,.15)}
+
+.popup{
+  position:fixed; inset:0; display:none; place-items:center; background:rgba(0,0,0,.6); z-index:60;
+}
+.popup .box{background:var(--card); border:1px solid rgba(255,255,255,.08); padding:1rem; border-radius:var(--radius); width:min(520px, 92%)}
+.popup.show{display:grid}
+
+@media(min-width:768px){
+  .masonry{columns:3}
+  .gallery-grid{grid-template-columns:repeat(3,1fr)}
+  .featured{grid-template-columns:repeat(3,1fr)}
+}
+
+.fade-in{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease}
+.fade-in.visible{opacity:1; transform:translateY(0)}
+
+/* Hover effects for cards/items */
+.card:hover{transform:translateY(-3px); transition:transform .2s}
+.item:hover{background:rgba(255,255,255,.02); border-radius:8px; padding:.6rem}
