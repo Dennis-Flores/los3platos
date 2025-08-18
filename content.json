@@ -1,12 +1,12 @@
 {
   "restaurant": {
-    "name": "Casa Bruma",
+    "name": "Los 3 Platos",
     "tagline": "Cocina de autor & eventos especiales",
-    "phone": "+56 9 5555 5555",
-    "whatsapp": "56955555555",
+    "phone": "+56 9 9249 7195",
+    "whatsapp": "56992497195",
     "email": "reservas@casabruma.cl",
-    "address": "Av. Gourmet 123, Puerto Montt, Chile",
-    "instagram_hashtag": "CasaBruma",
+    "address": "Urmeneta 860, Puerto Montt, Chile",
+    "instagram_hashtag": "los3platos_puertomontt",
     "opentable_rid": "RESTAURANT_ID_PLACEHOLDER"
   },
   "seals": [

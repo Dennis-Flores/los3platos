@@ -38,8 +38,15 @@ header.site{
   padding:.8rem 0;
 }
 .brand{display:flex; gap:.6rem; align-items:center}
-.brand .logo{width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--gold),var(--accent)); box-shadow:var(--shadow)}
-.brand .name{font-family:var(--font-display); letter-spacing:.5px; font-weight:700}
+.brand .logo{
+  width:140px;                 /* ajusta a tu gusto */
+  height:48px;
+  background: url("imagenes/Logo_blanco.png") no-repeat center;
+  background-size: contain;    /* evita deformación */
+  border-radius:0;             /* quita el círculo */
+  box-shadow:none;             /* sin sombra para logos */
+  flex: 0 0 auto;
+}.brand .name{font-family:var(--font-display); letter-spacing:.5px; font-weight:700}
 nav ul{display:flex; list-style:none; gap:1rem; padding:0; margin:0}
 nav a{padding:.4rem .7rem; border-radius:999px; transition:transform .2s}
 nav a:hover{transform:translateY(-2px); background:rgba(255,255,255,.06)}
