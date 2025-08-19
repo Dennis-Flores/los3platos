@@ -39,8 +39,10 @@ function buildMenu(){
     <div class="filters" id="diet-filters">
       <span class="badge">Filtros:</span>
       <button class="btn" data-filter="all">Todos</button>
-      <button class="btn" data-filter="vegano">Vegano</button>
-      <button class="btn" data-filter="gluten-free">Sin gluten</button>
+      <button class="btn" data-filter="Entradas">Entradas</button>
+      <button class="btn" data-filter="Platos Principales">Platos Principales</button>
+      <button class="btn" data-filter="Postres">Postres</button>
+      <button class="btn" data-filter="Bebidas">Bebidas</button>
     </div>
     ${categories.map(cat=>`
       <section class="category fade-in">

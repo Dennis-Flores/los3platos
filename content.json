@@ -4,22 +4,22 @@
     "tagline": "Cocina de autor & eventos especiales",
     "phone": "+56 9 9249 7195",
     "whatsapp": "56992497195",
-    "email": "reservas@casabruma.cl",
-    "address": "Urmeneta 860, Puerto Montt, Chile",
+    "email": "reservas@los3platos.cl",
+    "address": "Urmeneta 870, Puerto Montt, Chile",
     "instagram_hashtag": "los3platos_puertomontt",
     "opentable_rid": "RESTAURANT_ID_PLACEHOLDER"
   },
   "seals": [
     {
-      "label": "Chef reconocido 2024",
-      "icon": "⭐"
+      "label": "Sabores del Sur con Historia",
+      "icon": "✨"
     },
     {
-      "label": "Top 10 Restaurantes Región de Los Lagos",
-      "icon": "🏆"
+      "label": "Experiencias que se disfrutan lento",
+      "icon": "🍷"
     },
     {
-      "label": "Ingredientes locales",
+      "label": "Inspirados en el mar y la tierra del sur",
       "icon": "🌿"
     }
   ],
@@ -43,77 +43,93 @@
   ],
   "menu_items": [
     {
-      "name": "Ceviche de Reineta",
+      "name": "Ceviche",
       "category": "Entradas",
-      "price": 8900,
-      "desc": "Cítricos y ají verde, pesca del día.",
+      "price": 15000,
+      "desc": "Salmón y camarón, con pimientos, choclo, cebolla morada y cilantro en un dressing acevichado de la casa.",
       "tags": [
-        "gluten-free"
+        "Entradas"
       ]
     },
     {
-      "name": "Empanaditas de Centolla",
+      "name": "Chupe de Jaiva",
       "category": "Entradas",
-      "price": 9900,
-      "desc": "Masa crujiente, salsas caseras.",
-      "tags": []
-    },
-    {
-      "name": "Risotto de Setas",
-      "category": "Platos principales",
-      "price": 13900,
-      "desc": "Arroz arbóreo y mix de hongos.",
+      "price": 12000,
+      "desc": "Carne de jaiba cocinada con cebollín, choclo, crema, queso y cilantro acompañado de pan casero.",
       "tags": [
-        "vegano"
+        "Entradas"
       ]
     },
     {
-      "name": "Cordero Patagónico",
+      "name": "Pichanga (3-4 Personas)",
       "category": "Platos principales",
-      "price": 17900,
-      "desc": "Lento cocción, puré de topinambur.",
+      "price": 27990,
+      "desc": "Salteado de vacuno, cerdo, pollo, chorizo y salchicha artesanal, aceitunas, cebollitas, pepinillos, tomates, palmitos, palta, queso y huevo duro en una base de 800 grs de papas fritas.",
       "tags": [
-        "sin-gluten"
+        "Platos Principales"
       ]
     },
     {
-      "name": "Salmón a la Mantequilla",
+      "name": "Arriero (2-4 Personas)",
       "category": "Platos principales",
-      "price": 16900,
-      "desc": "Mantequilla avellanada, verduras de estación.",
+      "price": 26000,
+      "desc": "Pollo, cerdo y salchicha artesanal en crema de ajo asado y queso parmesano, aros de cebolla apanados, encurtidos y guacamole en base de papas fritas.",
       "tags": [
-        "gluten-free"
+        "Platos Principales"
       ]
     },
     {
-      "name": "Brownie de Chocolate",
+      "name": "Marina (2-4 Personas)",
+      "category": "Platos principales",
+      "price": 28990,
+      "desc": "Ceviche de salmón y camarón, pil pil de calamar y camarón, salsa de jaiba en una base de papas fritas, con queso parmesano, tostadas y salsa de yogurt.",
+      "tags": [
+        "Platos Principales"
+      ]
+    },
+    {
+      "name": "Sopaipilla Pasá",
       "category": "Postres",
-      "price": 6900,
-      "desc": "Con helado de vainilla.",
-      "tags": []
+      "price": 7990,
+      "desc": "6 Sopaipillas Pasadas.",
+      "tags": [
+        "Postres"
+      ]
     },
     {
-      "name": "Tiramisú de la Casa",
+      "name": "Triple Chocolate",
       "category": "Postres",
-      "price": 7200,
-      "desc": "Clásico con toque de amaretto.",
-      "tags": []
+      "price": 7990,
+      "desc": "Bizcocho de chocolate relleno con crema de chocolate y mantequilla de maní, bañado en salsa de chocolate.",
+      "tags": [
+        "Postres"
+      ]
     },
     {
-      "name": "Sour de Calafate",
+      "name": "Crumble",
+      "category": "Postres",
+      "price": 7990,
+      "desc": "Crumble de pera al vino tinto con helado de vainilla.",
+      "tags": [
+        "Postres"
+      ]
+    },  
+    {
+      "name": "Ruso Blanco",
       "category": "Bebidas",
-      "price": 5600,
+      "price": 6500,
       "desc": "Receta de autor.",
-      "tags": []
+      "tags": [
+        "Bebidas"
+      ]
     },
     {
-      "name": "Mocktail Bruma",
+      "name": "Cosmopolitan",
       "category": "Bebidas",
-      "price": 4800,
-      "desc": "Sin alcohol, frutos rojos.",
+      "price": 6000,
+      "desc": "licor triple sec, jugo de limón, jugo de arándanos, azúcar flor.",
       "tags": [
-        "vegano",
-        "gluten-free"
+        "Bebidas"
       ]
     }
   ],
